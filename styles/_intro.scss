@@ -46,3 +46,67 @@ nav {
   height: 100%;
   z-index: -1;
 }
+
+.intro-social {
+  margin-top: 4rem;
+  a{
+    margin-right: 5rem;
+  }
+}
+
+.active {
+  background: $gray-text;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+
+.intro-text, .intro-images {
+  flex: 1 1 40rem;
+}
+
+#plant-left {
+  animation: plant 1.5s ease infinite alternate;
+}
+#plant-right {
+  animation: plant 1.5s ease infinite alternate 0.7s;
+}
+
+#me {
+  animation: me 1.2s ease infinite alternate ;
+  transform-origin: bottom;
+}
+
+#clock-arrow {
+  animation: clock 1.5s infinite linear ;
+  //rotates from whole thing
+  transform-box: fill-box;
+  transform-origin: bottom;  
+}
+
+@keyframes me {
+  from {
+    transform: rotateZ(-10deg);
+  }
+  to {
+    transform: rotateZ(15deg);
+  }
+}
+
+@keyframes plant {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
